@@ -4,11 +4,8 @@ data = {}
 
 for line in f:
     line = line.strip("\n")
-
     temp = line.split(": ")
-
     t2 = temp[1].split(" ")
-
     if len(t2) == 1:
         data[temp[0]] = int(t2[0])
     else:
@@ -32,6 +29,4 @@ while isinstance(data.get("root"), list):
                 else:
                     data[e] = int(data.get(data.get(e)[0]) / data.get(data.get(e)[2]))
 
-
-
-print(data.get("root"))
+print("First part: " + str(data.get("root")))
